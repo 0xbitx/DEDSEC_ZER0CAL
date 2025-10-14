@@ -84,7 +84,6 @@ Follow the steps below to configure your Google Cloud project and enable Google 
 ### TESTED ON FOLLOWING
 * Kali Linux 
 * Parrot OS 
-* Ubuntu
   
 ## Legal Disclaimer
 
