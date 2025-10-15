@@ -74,10 +74,6 @@ Follow the steps below to configure your Google Cloud project and enable Google 
     chmod +x dedsec-zer0cal
     sudo ./dedsec-zer0cal
     
-    or
-    
-    sudo apt install ./dedsec-zer0cal.deb
-    dedsec-zer0cal
 
 ### TESTED ON FOLLOWING
 * Kali Linux 
