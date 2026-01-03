@@ -4,19 +4,23 @@
 </p>
 
 <h1 align="center">ZER0CAL</h1>
-<h4 align="center"> ZER0CAL - linux-based backdoor builder</h4>
+<h4 align="center">ZER0CAL - Linux-based polymorphic backdoor builder</h4>
 
 ### DESCRIPTION
 ZER0CAL is a Linux-based backdoor designed for ethical penetration testing and cybersecurity research. It uses Google Calendar as a stealthy Command and Control (C2) server to handle backdoors on Linux systems, allowing for remote command execution through event-based communication. The tool injects a polymorphic dropper into regular Python code, ensuring each version is unique by modifying variables, functions, and signatures to evade detection and stay under the radar. This adaptive approach means every build features fresh code changes, making it harder for security tools to identify patterns. Inspired by APT41 techniques and evasion strategies, ZER0CAL provides a robust framework for exploring advanced C2 methodologies in controlled, ethical settings.
 
-### Features:
-  * Polymorphic Injection: Automatically modifies code (e.g., variables and functions) in each build to create unique signatures, making it harder for antivirus tools to detect.
+### Key Features:
+  * **Polymorphic Injection**: Automatically modifies code (e.g., variables and functions) in each build to create unique signatures, making it harder for antivirus tools to detect.
   
-  * Google Calendar C2: Uses Google Calendar events as a covert channel for backdoor communication, allowing remote command execution on Linux targets.
+  * **Per-Machine Unique Signatures**: Each payload deployed to a victim machine receives a unique ELF binary signature by modifying padding bytes in the executable header, ensuring every instance has a different cryptographic fingerprint.
   
-  * Dropper Builder: Injects a custom dropper into any legitimate Python script, transforming it into a backdoor payload.
+  * **Google Calendar C2**: Uses Google Calendar events as a covert channel for backdoor communication, allowing remote command execution on Linux targets.
   
-  * Linux Backdoor Deployment: Focuses on Linux systems, with features for persistent execution and event-based polling.
+  * **Dropper Builder**: Injects a custom dropper into any legitimate Python script, transforming it into a backdoor payload.
+  
+  * **Linux Backdoor Deployment**: Focuses on Linux systems, with features for persistent execution and event-based polling.
+  
+  * **Signature Evasion**: Changes ELF file signatures on-the-fly during deployment, making hash-based detection ineffective across different infected machines.
 
 ### SETUP
 Setup (Google Calendar C2)
